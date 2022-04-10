@@ -1,5 +1,6 @@
 package com.mfcspring.demo.service;
 
+import com.mfcspring.demo.dto.ProjectDto;
 import com.mfcspring.demo.entity.Project;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -8,11 +9,11 @@ import java.util.List;
 
 
 public interface ProjectService {
-    Project save(Project project);
+    ProjectDto save(ProjectDto project);
 
-    Project getById(Long id);
+    ProjectDto getById(Long id);
 
-    List<Project> getAllByProjectCode(String projectCode);
+    ProjectDto getAllByProjectCode(String projectCode);
 
     List<Project> getAllByProjectCodeContains(String projectCode);
 
